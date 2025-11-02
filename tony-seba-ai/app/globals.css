@@ -1,0 +1,213 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 240 17% 95%;
+    --foreground: 240 10% 25%;
+    --card: 0 0% 98%;
+    --card-foreground: 240 10% 25%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 240 10% 25%;
+    --primary: 250 75% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 15% 92%;
+    --secondary-foreground: 240 10% 35%;
+    --muted: 240 10% 90%;
+    --muted-foreground: 240 5% 50%;
+    --accent: 245 60% 92%;
+    --accent-foreground: 245 60% 50%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 10% 88%;
+    --input: 0 0% 96%;
+    --ring: 250 75% 70%;
+    --radius: 0.5rem;
+    --sidebar-bg: 0 0% 98%;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  position: relative;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(135deg,
+      rgba(191, 219, 254, 0.5) 0%,
+      rgba(221, 194, 255, 0.5) 100%);
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.premium-gradient-text {
+  background-image: linear-gradient(135deg, #7C3AED 0%, #A78BFA 50%, #93C5FD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Markdown styling */
+.markdown-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgb(30 58 138 / 0.9);
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: rgb(30 58 138);
+}
+
+.markdown-content h1 { font-size: 1.5em; }
+.markdown-content h2 { font-size: 1.3em; }
+
+.markdown-content p {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgb(30 58 138 / 0.9);
+}
+
+.markdown-content strong {
+  font-weight: 600;
+  color: rgb(30 58 138);
+}
+
+.markdown-content em {
+  font-style: italic;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-left: 1.5em;
+}
+
+.markdown-content li {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  color: hsl(var(--foreground));
+}
+
+.markdown-content ul {
+  list-style-type: disc;
+}
+
+.markdown-content ol {
+  list-style-type: decimal;
+}
+
+.markdown-content code {
+  background-color: rgb(243 244 246);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  color: hsl(var(--primary));
+  font-family: 'Courier New', monospace;
+}
+
+.markdown-content pre {
+  background-color: rgb(243 244 246);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.markdown-content pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.markdown-content a {
+  color: rgb(37 99 235);
+  text-decoration: none;
+}
+
+.markdown-content a:hover {
+  text-decoration: underline;
+}
+
+.markdown-content blockquote {
+  border-left: 4px solid hsl(var(--primary));
+  padding-left: 1em;
+  margin-left: 0;
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+}
+
+/* Key takeaways section styling - Clean professional look */
+.markdown-content h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+  color: rgb(37 99 235);
+}
+
+/* Style the key takeaways box */
+.markdown-content h3 + ul {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(191, 219, 254, 0.9);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 0 0 1rem 0;
+  list-style: none;
+}
+
+.markdown-content h3 + ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  color: rgb(30 58 138 / 0.9);
+}
+
+.markdown-content h3 + ul li + li {
+  border-top: 1px solid rgba(191, 219, 254, 0.3);
+}
+
+/* Style the emoji container */
+.markdown-content h3 + ul li::before {
+  content: none;
+}
+
+.markdown-content h3 + ul li strong {
+  font-weight: 600;
+  color: rgb(37 99 235);
+  display: inline;
+}
+
+/* Make emojis look better */
+.markdown-content h3 + ul li:first-child::first-letter,
+.markdown-content h3 + ul li::first-letter {
+  font-size: 1.25rem;
+  line-height: 1;
+}
