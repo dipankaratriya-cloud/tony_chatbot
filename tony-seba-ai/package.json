@@ -10,6 +10,7 @@
     "deploy": "vercel --prod"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "ai": "^5.0.86",
     "chart.js": "^4.5.1",
     "chartjs-plugin-annotation": "^3.1.0",

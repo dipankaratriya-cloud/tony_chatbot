@@ -511,7 +511,7 @@ export default function TonySebaAI() {
         {showGraphPanel && (
           <aside className="w-[480px] bg-white border-l border-[hsl(var(--border))] flex flex-col shadow-xl">
             <div className="p-4 border-b border-[hsl(var(--border))] flex items-center justify-between bg-gradient-to-r from-blue-50 to-purple-50">
-              <h2 className="text-lg font-bold text-[hsl(var(--foreground))]">📊 Data Visualization</h2>
+              <h2 className="text-lg font-bold text-[hsl(var(--foreground))]">Graphs</h2>
               <button
                 onClick={() => setShowGraphPanel(false)}
                 className="flex size-8 items-center justify-center rounded-lg text-[hsl(var(--muted-foreground))] hover:bg-white/60 transition-colors"
@@ -536,7 +536,7 @@ export default function TonySebaAI() {
         {showSourcesPanel && (
           <aside className="w-[480px] bg-white border-l border-[hsl(var(--border))] flex flex-col shadow-xl">
             <div className="p-4 border-b border-[hsl(var(--border))] flex items-center justify-between bg-gradient-to-r from-green-50 to-blue-50">
-              <h2 className="text-lg font-bold text-[hsl(var(--foreground))]">📚 Verified Sources</h2>
+              <h2 className="text-lg font-bold text-[hsl(var(--foreground))]">Sources</h2>
               <button
                 onClick={() => setShowSourcesPanel(false)}
                 className="flex size-8 items-center justify-center rounded-lg text-[hsl(var(--muted-foreground))] hover:bg-white/60 transition-colors"
