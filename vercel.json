@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd tony-seba-ai && npm run build",
+  "outputDirectory": "tony-seba-ai/.next",
+  "framework": "nextjs",
+  "installCommand": "cd tony-seba-ai && npm install"
+}
